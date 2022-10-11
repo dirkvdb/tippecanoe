@@ -50,3 +50,7 @@ tests/**/*.geobuf
 
 # Nodejs
 node_modules
+.cache
+build
+vcpkg_installed
+compile_commands.json

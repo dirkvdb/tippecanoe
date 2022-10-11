@@ -1,0 +1,46 @@
+[
+    {
+        "name": "x64-osx",
+        "toolchainFile": "${workspaceRoot}/deps/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "cmakeSettings": {
+            "VCPKG_TARGET_TRIPLET": "x64-osx",
+            "VCPKG_ALLOW_SYSTEM_LIBS": "ON",
+            "VCPKG_TARGET_ARCHITECTURE": "x64",
+            "VCPKG_CRT_LINKAGE": "static",
+            "VCPKG_LIBRARY_LINKAGE": "static",
+            "VCPKG_CMAKE_SYSTEM_NAME": "Darwin",
+            "VCPKG_OSX_ARCHITECTURES": "x86_64",
+            "VCPKG_OSX_DEPLOYMENT_TARGET": "11.3",
+            "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${workspaceRoot}/deps/vcpkg/triplets/toolchain-osx-appleclang.cmake",
+            "VCPKG_INSTALLED_DIR": "${workspaceRoot}/vcpkg_installed"
+        }
+    },
+    {
+        "name": "arm64-osx",
+        "toolchainFile": "${workspaceRoot}/deps/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "cmakeSettings": {
+            "VCPKG_TARGET_TRIPLET": "arm64-osx",
+            "VCPKG_CMAKE_SYSTEM_NAME": "Darwin",
+            "VCPKG_OSX_ARCHITECTURES": "arm64",
+            "VCPKG_OSX_DEPLOYMENT_TARGET": "11.3",
+            "VCPKG_C_FLAGS": "-fvisibility=hidden",
+            "VCPKG_CXX_FLAGS": "-fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=11.3",
+            "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${workspaceRoot}/deps/vcpkg/triplets/toolchain-osx-appleclang.cmake",
+            "VCPKG_INSTALLED_DIR": "${workspaceRoot}/vcpkg_installed"
+        }
+    },
+    {
+        "name": "x64-osx-gcc",
+        "toolchainFile": "${workspaceRoot}/deps/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "cmakeSettings": {
+            "VCPKG_TARGET_TRIPLET": "x64-osx-gcc"
+        }
+    },
+    {
+        "name": "x64-osx-homebrew",
+        "toolchainFile": "${workspaceRoot}/../vcpkg-ports/scripts/buildsystems/vcpkg.cmake",
+        "cmakeSettings": {
+            "VCPKG_TARGET_TRIPLET": "x64-osx-homebrew"
+        }
+    }
+]
